@@ -23,9 +23,10 @@ CREATE TABLE Streets(
     City  VARCHAR2(50) NOT NULL,
     StateName VARCHAR2(50) NOT NULL,
     Country VARCHAR2(50) NOT NULL,
-    StreetNumber NUMBER NOT NULL,
+    StreetNumber NUMBER NULL,
     PRIMARY KEY(Street,City,Country)
 );
+
 
 ALTER TABLE Streets
 ADD CONSTRAINT CountryForenStreet
@@ -63,13 +64,13 @@ CREATE TABLE INCEDENTS(
     Street varchar2(50) NOT NULL,
     City  VARCHAR2(50) NOT NULL,
     Country VARCHAR2(50) NOT NULL,
-    TMC DECIMAL NOT NULL,
+    TMC FLOAT NULL,
     Severity INTEGER NOT NULL,
     InfoSource VARCHAR2(50) NOT NULL,
     StartTime TIMESTAMP NOT NULL,
     EndTime TIMESTAMP NOT NULL,
     Side VARCHAR2(1) NOT NULL,
-    Distance DECIMAL NOT NULL,
+    Distance FLOAT(10) NOT NULL,
 
     CONSTRAINT Incedent_Street_Foren
     FOREIGN KEY (Street,City,Country) REFERENCES streets(Street,City,Country),

@@ -41,6 +41,9 @@ VALUES ('R');
 INSERT INTO SIDES(SIDE)
 VALUES ('L');
 
+insert into countryes(country)
+values ('US');
+
 INSERT INTO CITYES(CITY,STATENAME,COUNTRY)
 VALUES ('Reynoldsburg','OH','US');
 INSERT INTO CITYES(CITY,STATENAME,COUNTRY)
